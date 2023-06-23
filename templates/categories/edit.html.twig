@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Question{% endblock %}
+
+{% block body %}
+    <div class="card bg-dark text-light">
+        <div class="card-body">
+            <div class="edit_form">
+                {{ form_start(form, {'attr': {'class': 'form'}}) }}
+                <h2>Modifier la question</h2>
+                
+                <div class="form-group">
+                    {{ form_label(form.question, 'Question') }}
+                    {{ form_widget(form.question, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                
+                <h3>Réponses</h3>
+                <ul id="responses-container" class="list-unstyled">
+                    {% for responseForm in form.responses %}
+                        <li class="form-group">
+                            {{ form_row(responseForm, {'attr': {'class': 'form-control'}}) }}
+                        </li>
+                    {% endfor %}
+                </ul>
+                
+                <div class="form-group">
+                    {{ form_label(form.correctResponse, 'Réponse correcte') }}
+                    {{ form_widget(form.correctResponse, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Valider les modifications</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateurs{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        
+        <table class="table table-dark table-striped">
+            <h2 class="text-light text-center" >Utilisateurs</h2>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for quiz in quizz %}
+                    <tr>
+                        <td>{{ quiz.name }}</td>
+                        <td><a href="{{ path('quizz_stat', { 'quizzId': quiz.id }) }}">Statistiques</a></td>
+                        <td><a href="{{ path('liste_questions', { 'quizzId': quiz.id }) }}">Questions</a></td>
+                        <td><a href="{{ path('edit_categorie', { 'quizzId': quiz.id }) }}">Modifier</a></td>                    
+                        <td><a href="{{ path('delete_quizz', { 'quizzId': quiz.id }) }}">Supprimer</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

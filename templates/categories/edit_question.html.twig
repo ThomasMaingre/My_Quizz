@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Question{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card bg-dark text-light">
+            <div class="card-body">
+                <h2 class="card-title">Edit Question</h2>
+                {{ form_start(form) }}
+                <div class="form-group">
+                    {{ form_label(form.question) }}
+                    {{ form_widget(form.question, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

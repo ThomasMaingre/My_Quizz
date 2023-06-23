@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Questions for
+	{{ category.name }}
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		.cover-image {
+			background-image: url("/assets/{{ category.id }}.png");
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-12 position-relative">
+				<div class="cover-image"></div>
+				<h1 class="mt-0 mb-4 position-absolute start-50 translate-middle-x bottom-50 text-center" style="left: 50%;">
+					<span>{{ category.name }}</span>
+					<br>
+					<span>
+						Question:
+						{{ currentQuestionIndex + 1 }}
+						/
+						{{ questions|length }}
+					</span>
+					<br>
+					<span>
+						Score:
+						{{score}}
+					</span>
+				</h1>
+			</div>
+		</div>
+
+		{% if questions|length > 0 %}
+			<ul class="list-group mt-3">
+				<li class="list-group-item">
+					<span class="question_text">{{ questions[currentQuestionIndex].question }}</span>
+					<ul class="list-group mt-3">
+						{% set questionResponses = responses[questions[currentQuestionIndex].getId()] %}
+
+						{# Randomly shuffle the responses list #}
+						{% set shuffledResponses = questionResponses|shuffle %}
+
+						{% for response in shuffledResponses %}
+							<form action="{{ path('app_categories_rep', { 'id': category.id }) }}" method="post">
+								<input type="hidden" name="qpos" value="{{ currentQuestionIndex + 1 }}">
+								<input type="hidden" name="responseId" value="{{ response.id }}">
+								<input type="hidden" name="questionId" value="{{ questions[currentQuestionIndex].getId() }}">
+								<button type="submit" class="btn btn-primary btn-lg btn-block">{{ response.reponse }}</button>
+							</form>
+						{% endfor %}
+					</ul>
+				</li>
+			</ul>
+		{% else %}
+			<p>No questions available.</p>
+		{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card bg-dark text-light">
+            <div class="card-body">
+                <h2 class="card-title">Edit User</h2>
+                {{ form_start(form) }}
+                <div class="form-group">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.status) }}
+                    {{ form_widget(form.status, { 'attr': {'class': 'form-check-input'} }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.confirmed) }}
+                    {{ form_widget(form.confirmed, { 'attr': {'class': 'form-check-input'} }) }}
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

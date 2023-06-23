@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateurs{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h4 class="text-light text-center">{{ question.question }}</h4>
+        
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Choix</th>
+                    <th>Reponse</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for response in responses %}
+                    <tr>
+                        <td>{{ response.reponse }}</td>
+                        <td>{{ response.getReponseExpected() ? 'Vrai' : '' }}</td>
+                        <td><a href="{{ path('edit_reponse', { 'reponseId': response.id }) }}">Modifier</a></td>
+                        <td><a href="{{ path('delete_reponse', { 'reponseId': response.id }) }}">Supprimer</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

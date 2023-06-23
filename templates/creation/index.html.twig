@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Quizz{% endblock %}
+
+{% block body %}
+
+<div class="card bg-dark text-light">
+    <div class="card-body">
+        <div class="creation_form">
+            <form action="{{ path('create_quizz') }}" method="POST">
+                <h2>Creer un nouveau Quizz</h2>
+                
+                <label for="category">Categorie:</label>
+                <input type="text" id="category" name="category" required>
+                <p></p>
+                <div id="question-container">
+                    {% set totalQuestions = question %}
+                    {% for i in 1..totalQuestions %}
+                        <div class="question">
+                        <label for="question">Question {{ loop.index0 + 1 }}:</label>
+                        <input type="text" name="questions[]" required>
+                        <label for="correct_answer">Reponse correcte:</label>
+                        <select name="correct_answers[{{ loop.index0 }}]">
+                            <option value="0">Choix 1</option>
+                            <option value="1">Choix 2</option>
+                            <option value="2">Choix 3</option>
+                            <option value="3">Choix 4</option>
+                        </select>
+                        <br>
+                        <label for="answers">Reponses:</label>
+                        <input type="text" name="answers[{{ loop.index0 }}][]" required>
+                        <input type="text" name="answers[{{ loop.index0 }}][]" required>
+                        <input type="text" name="answers[{{ loop.index0 }}][]" required>
+                        <input type="text" name="answers[{{ loop.index0 }}][]" required>
+                    </div>
+                    <br>
+                    {% endfor %}
+                </div>
+                
+                <button type="submit">Valider mon Quizz</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

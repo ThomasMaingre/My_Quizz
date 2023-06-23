@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stats Quizz{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <table class="table table-dark table-striped">
+            <h2 class="text-light text-center">Statistiques Quizz</h2>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Participations</th>
+                    <th>Score Moyen</th>
+                    <th>Nombre de questions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for quizzStat in quizzStats %}
+                    <tr>
+                        <td>{{ quizzStat.quizz.name }}</td>
+                        <td>{{ quizzStat.participations }}</td>
+                        <td>{{ quizzStat.averageScore }}</td>
+                        <td>{{ quizzStat.questionCount }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

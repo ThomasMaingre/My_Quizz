@@ -1,0 +1,47 @@
+2023/05/27 14:46:54 Using in-memory storage
+2023/05/27 14:46:54 [SMTP] Binding to address: 0.0.0.0:1025
+[HTTP] Binding to address: 0.0.0.0:8025
+2023/05/27 14:46:54 Serving under http://0.0.0.0:8025/
+Creating API v1 with WebPath: 
+Creating API v2 with WebPath: 
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv2] GET /api/v2/messages
+[APIv2] GET /api/v2/messages
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv2] GET /api/v2/messages
+[APIv2] GET /api/v2/messages
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+2023/05/27 14:56:58 [SMTP [::1]:43992] Starting session
+2023/05/27 14:56:58 [SMTP [::1]:43992] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2023/05/27 14:56:58 [SMTP [::1]:43992] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2023/05/27 14:57:01 [SMTP [::1]:43992] Received 5 bytes: 'ÿôÿý'
+2023/05/27 14:57:02 [SMTP [::1]:43992] Received 5 bytes: 'ÿôÿý'
+2023/05/27 14:57:02 [SMTP [::1]:43992] Received 5 bytes: 'ÿôÿý'
+2023/05/27 14:57:02 [SMTP [::1]:43992] Received 5 bytes: 'ÿôÿý'
+2023/05/27 14:57:02 [SMTP [::1]:43992] Received 2 bytes: '\r\n'
+2023/05/27 14:57:02 [SMTP [::1]:43992] [PROTO: ESTABLISH] Processing line: ÿôÿýÿôÿýÿôÿýÿôÿý
+2023/05/27 14:57:02 [SMTP [::1]:43992] [PROTO: ESTABLISH] In state 1, got command 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', args ''
+2023/05/27 14:57:02 [SMTP [::1]:43992] [PROTO: ESTABLISH] In ESTABLISH state
+2023/05/27 14:57:02 [SMTP [::1]:43992] [PROTO: ESTABLISH] Got unknown command for ESTABLISH state: 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'
+2023/05/27 14:57:02 [SMTP [::1]:43992] Sent 26 bytes: '500 Unrecognised command\r\n'
+2023/05/27 14:57:07 [SMTP [::1]:43992] Connection closed by remote host
+2023/05/27 14:57:07 [SMTP [::1]:43992] Session ended
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Profile
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1 class="mt-5">My Profile</h1>
+
+		<dl class="row mt-4">
+			<dt class="col-sm-3">Username:</dt>
+			<dd class="col-sm-9">{{ user.name }}</dd>
+
+			<dt class="col-sm-3">Email:</dt>
+			<dd class="col-sm-9">{{ user.email }}</dd>
+
+			<!-- Add more user details here as needed -->
+		</dl>
+
+		<a href="{{ path('app_user_edit') }}" class="btn btn-primary">Edit Profile</a>
+	</div>
+{% endblock %}
