@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> A remplir
+Ce projet est un site de quizz interactif en utilisant Symfony, avec la particularité d'exclure l'utilisation de JavaScript. Nous avons été chargé de concevoir et de développer un système de quizz complet, comprenant différentes catégories, un ensemble varié de questions et un mécanisme de score.
 
 ## Installation
 
