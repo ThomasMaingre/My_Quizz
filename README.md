@@ -30,7 +30,7 @@ php bin/console server:run
 
 ## Présentation du projet
 
-> A remplir
+L'objectif principal de ce projet était de créer un site de quizz interactif. Nous avons travaillé sur la mise en place d'une structure de base solide, permettant la création de catégories de quizz personnalisées. Enfin, j'ai mis en place un mécanisme de score pour évaluer les performances des utilisateurs et leur fournir un retour sur leurs réponses.
 
 ### Utilisateurs non connectés
 
@@ -51,10 +51,3 @@ php bin/console server:run
 - Envoyer des e-mails aux utilisateurs en fonction de différents critères (quizz passés, dernières connexions, etc.).
 - Consulter des statistiques détaillées sur les quizz et les utilisateurs.
 - Afficher un graphique du nombre de visiteurs uniques et de quizz effectués sur différentes périodes de temps.
-
-
-## Description
-
-My Quiz est un site de quiz qui permet aux utilisateurs de tester leur culture générale à travers une série de questions. Le projet vise à collecter des informations sur les utilisateurs, leurs intérêts, leurs préférences, etc., afin de proposer un contenu ciblé.
-
-Le développement du site est basé sur le Framework Symfony version 3 ou supérieure. Le JavaScript est interdit dans ce projet, y compris pour les bonus. Les réponses aux quiz ne doivent pas être déduites du code source.
